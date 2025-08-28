@@ -1,2 +1,102 @@
-p{color:aqua; font-size: 16px;}
-*{background-color: chocolate;}
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  background: #004466;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+.header h1 {
+  font-size: 2rem;
+}
+.header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* Main Container */
+.container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* About Section */
+.about {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Highlights Section using Flexbox */
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: #004466;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* ============================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ============================= */
+
+/* Tablets and larger */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 2fr 3fr;
+    align-items: start;
+  }
+  .highlights {
+    flex-direction: row;
+  }
+  .card {
+    flex: 1;
+  }
+}
+
+/* Desktops and larger */
+@media (min-width: 1024px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  .header p {
+    font-size: 1.2rem;
+  }
+  .about, .card {
+    padding: 2rem;
+  }
+}
